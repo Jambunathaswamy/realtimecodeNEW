@@ -9,14 +9,14 @@ pipeline{
            stage('Checkout'){
                agent any
                steps{
-		 echo 'cloning..'
+		 echo 'cloning'
                  git 'https://github.com/Jambunathaswamy/realtimecodeNEW.git'
               }
           }
           stage('Compile'){
               agent any
               steps{
-                  echo 'compiling..'
+                  echo 'compiling'
                   sh 'mvn compile'
 	      }
           }
