@@ -39,7 +39,7 @@ pipeline{
                }
            }	
           }
-           stage('MetricCheck'){
+           stage('MetriCheck'){
                agent any
               steps{
                   sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
