@@ -1,8 +1,8 @@
 
 pipeline{
     tools{
-        jdk 'JAVA_HOME'
-        maven 'M2_HOME'
+        jdk 'JAVA_HOME 1'
+        maven 'M2_HOME 1'
     }
     agent none
       stages{
@@ -39,7 +39,7 @@ pipeline{
                }
            }	
           }
-           stage('MetriCheck'){
+           stage('MetricCheck'){
                agent any
               steps{
                   sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
